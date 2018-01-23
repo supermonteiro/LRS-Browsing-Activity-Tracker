@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Webpage Logger Options</title>
+    <style>
+        body { font-family: "Droid Sans", sans-serif; color: #333; }
+        input { transition: border-color 0.3s; border: 1px solid #ccc; padding: 0.2em }
+        input:focus { border: 1px solid #66AFE9; outline: none; }
+        .logo { float: left; margin-right: 1em; }
+        h2 { margin: 0; padding: 0; margin-bottom: 0.1em; }
+        p { margin:0; padding: 0; }
+        header { border-bottom: 1px solid #ccc; padding-bottom: 0.5em; margin-bottom: 1em }
+        main { padding-left: 1em; }
+        a { text-decoration: none; color: #428BCA}
+        a:hover {text-decoration: underline; color: #2A6496}
+        hr { border: none; border-bottom: 1px solid #ccc;}
+        form {display: table; margin-left: 2em}
+        em.info {color: #777}
+    </style>
+</head>
+<body>
+<header>
+<img class="logo" src="llbe48.png"/>
+<h2>LearningLocker Browsing Activity Tracker</h2>
+<p><em>By</em> <a href="mailto:supermonteiro@gmail.com">Thiago Monteiro Barbosa</a></p>
+</header>
+<main>
+<p>Sends browsing activity to a LRS.
+<a href="https://github.com/Thibauth/browsing-activity-tracker">Read more.</a></p>
+<h3>Options</h3>
+<form>
+<p>
+<label for=endpoint> Endpoint URL</label>: <input id="endpoint" type="text" spellcheck="false"><br/>
+<em class=info>Endpoint to be POSTed.</em>
+</p>
+<hr/>
+<p>
+<label for=username> Username / Key:</label> <input id="username" type="text" spellcheck="false"><br/>
+<em class=info>Username / Key of the LRS</em>
+</p>
+<p>
+<label for=secret> Secret</label>: <input id="secret" type="text" spellcheck="false"><br/>
+<em class=info>Secret of the LRS.</em>
+</p>
+<hr/>
+</main>
+<script src='options.js'></script>
+
+</body>
+</html>

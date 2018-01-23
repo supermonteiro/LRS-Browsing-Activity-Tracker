@@ -1,0 +1,23 @@
+{
+    "name": "LRS Browsing Activity Tracker",
+    "author": "Thiago Monteiro Barbosa <supermonteiro@gmail.com>",
+    "version": "0.1",
+    "description": "Notify a LRS whenever a webpage is loaded or displayed.",
+    "homepage_url": "https://github.com/supermonteiro/browsing-activity-tracker",
+    "icons": {
+        "16": "llbe16.png",        
+        "32": "llbe32.png",        
+        "48": "llbe48.png",
+        "128": "llbe128.png",
+        "256": "llbe256.png"
+    },
+    "manifest_version": 2,
+    "background": {
+        "scripts": ["bg.js", "tincan.js"]
+    },
+    "permissions": [
+        "tabs",
+        "storage"
+    ],
+    "options_page": "options.html"
+}
