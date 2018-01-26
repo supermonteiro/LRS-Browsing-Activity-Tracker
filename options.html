@@ -2,10 +2,10 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>Webpage Logger Options</title>
+    <title>LRS Browsing Activity Tracker Logger Options</title>
     <style>
         body { font-family: "Droid Sans", sans-serif; color: #333; }
-        input { transition: border-color 0.3s; border: 1px solid #ccc; padding: 0.2em }
+        input { transition: border-color 0.3s; border: 1px solid #ccc; padding: 0.2em; width: 450px }
         input:focus { border: 1px solid #66AFE9; outline: none; }
         .logo { float: left; margin-right: 1em; }
         h2 { margin: 0; padding: 0; margin-bottom: 0.1em; }
@@ -15,8 +15,9 @@
         a { text-decoration: none; color: #428BCA}
         a:hover {text-decoration: underline; color: #2A6496}
         hr { border: none; border-bottom: 1px solid #ccc;}
-        form {display: table; margin-left: 2em}
-        em.info {color: #777}
+        form {display: table; margin-left: 2em; width: 600px}
+        em.info {color: #777; margin-bottom: 5px}
+        label{float: left; width: 120px;font-weight: bold;}
     </style>
 </head>
 <body>
@@ -31,7 +32,7 @@
 <h3>Options</h3>
 <form>
 <p>
-<label for=endpoint> Endpoint URL</label>: <input id="endpoint" type="text" spellcheck="false"><br/>
+<label for=endpoint> Endpoint URL:</label> <input id="endpoint" type="text" spellcheck="false"><br/>
 <em class=info>Endpoint to be POSTed.</em>
 </p>
 <hr/>
@@ -39,11 +40,22 @@
 <label for=username> Username / Key:</label> <input id="username" type="text" spellcheck="false"><br/>
 <em class=info>Username / Key of the LRS</em>
 </p>
+<hr/>     
 <p>
-<label for=secret> Secret</label>: <input id="secret" type="text" spellcheck="false"><br/>
+<label for=secret> Secret:</label> <input id="secret" type="text" spellcheck="false"><br/>
 <em class=info>Secret of the LRS.</em>
 </p>
 <hr/>
+<button id="save">Save</button>
+<hr/>    
+
+<form id="jsonFile" name="jsonFile" enctype="multipart/form-data" method="post">
+  <fieldset>
+    <h4>Whitelist File</h4>
+     <input type='file' id='fileinput'>
+     <button  id='btnLoad'>Upload</button>
+  </fieldset>
+</form>       
 </main>
 <script src='options.js'></script>
 

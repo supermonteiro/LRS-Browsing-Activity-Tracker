@@ -17,7 +17,9 @@
     },
     "permissions": [
         "tabs",
-        "storage"
+        "storage",
+        "identity",
+        "identity.email"
     ],
     "options_page": "options.html"
 }
